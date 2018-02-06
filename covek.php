@@ -3,29 +3,51 @@ class Covek{
 	
 	private $ime;
       	private $prezime;
-	$brGodina;
-	$strucnaSprema;
+	private $brGodina;
+	private $strucnaSprema;
+	private $zaposlen;
 	
-  	function __construct($ime, $prezime){
+  	public function __construct(string $ime, string $prezime, int $brGodina, string $strucnaSprema){
 		$this -> ime = $ime;
 	  	$this -> prezime = $prezime;
+		$this -> brGodina = $brGodina;
+		$this -> strucnaSprema = $strucnaSprema;
+		$this -> zaposlen = true;
   	}
 	
-  	function getIme(){
+  	public function getIme(): string{
 	  	return $this->ime;
   	}
 	
-  	function getPrezime(){
+	public function setIme(string $ime): void{
+       	 	$this->ime = $ime;
+    	}
+	
+  	public function getPrezime(): string{
 	  	return $this->prezime;
   	}
+	public function setPrezime(string $prezime): void{
+       	 	$this->prezime = $prezime;
+    	}
 	
-  	function getBrGodina(){
+  	public function getBrGodina(): int{
 	  	return $this->brGodina;
   	}
+    	public function setBrGodina(int $brGodina): void{
+        	$this->brGodina = $brGodina;
+    	}
 	
-	function getStrucnaSprema(){
+	public function getStrucnaSprema(): string{
 	  	return $this->strucnaSprema;
   	}
+	public function setStrucnaSprema(string $strucnaSprema): void{
+       	 	$this->strucnaSprema = $strucnaSprema;
+    	}
+	
+	public function jeZaposlen(): bool {
+       	 	return $this->zaposlen;
+   	}
+
 	
   	function isUnderage(){
 	  	if ($brGodina >= 18){
