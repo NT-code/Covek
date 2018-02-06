@@ -1,34 +1,40 @@
 <?php
 class Covek{
-	      private $ime;
-        private $prezime;
-	      $brGodina;
 	
-  function __construct($ime, $prezime){
-	  $this -> ime = $ime;
-	  $this -> prezime = $prezime;
-  }
+	private $ime;
+      	private $prezime;
+	$brGodina;
+	$strucnaSprema;
 	
-  function getIme(){
-	  return $this->ime;
-  }
+  	function __construct($ime, $prezime){
+		$this -> ime = $ime;
+	  	$this -> prezime = $prezime;
+  	}
 	
-  function getPrezime(){
-	  return $this->prezime;
-  }
+  	function getIme(){
+	  	return $this->ime;
+  	}
 	
-  function getBrGodina(){
-	  return $this->brGodina;
-  }
+  	function getPrezime(){
+	  	return $this->prezime;
+  	}
 	
-  function isUnderage(){
-	  if ($brGodina >= 18){
-		  echo "Lice je punoletno.";
-	  }
-	  else{
-		  echo "Lice je maloletno, ne moze stupiti u radni odnos.";
-	  }
-  }
+  	function getBrGodina(){
+	  	return $this->brGodina;
+  	}
+	
+	function getStrucnaSprema(){
+	  	return $this->strucnaSprema;
+  	}
+	
+  	function isUnderage(){
+	  	if ($brGodina >= 18){
+		  	echo "Lice je punoletno.";
+	  	}
+	  	else{
+		  	echo "Lice je maloletno, ne moze stupiti u radni odnos.";
+	  	}
+  	}
  
 }
 ?>
